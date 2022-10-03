@@ -40,6 +40,8 @@ pub mod pallet {
     #[pallet::storage]
 	#[pallet::getter(fn root)]
     ///strage to store the root
+	
+	
 	pub type Root<T:Config> = StorageValue<_, T::AccountId>;
 	// Pallets use events to inform users when important changes are made.
 	// https://docs.substrate.io/v3/runtime/events-and-errors
@@ -48,8 +50,8 @@ pub mod pallet {
 	pub enum Event<T: Config> {
 		///MemberAdded
 		MemberAdded( T::AccountId),
-        ///MemberRemoved
-        MemberRemoved(T::AccountId),
+        	///MemberRemoved
+        	MemberRemoved(T::AccountId),
 	}
 
 	// Errors inform users that something went wrong.
