@@ -78,6 +78,7 @@ pub mod pallet {
                   
             let who = ensure_signed(origin)?;
            // Read a value from storage.
+		// Not checking while updating storage
 			match <Root<T>>::get() {
 				// Return an error if the value has not been set.
 				None =>{
