@@ -34,7 +34,7 @@ pub mod pallet {
 	// https://docs.substrate.io/v3/runtime/storage
 	#[pallet::storage]
 	#[pallet::getter(fn members)]
-    ///storage map to store members with their id
+    
 	pub type Members<T:Config> = StorageMap<_,Blake2_128Concat, u32,T::AccountId,OptionQuery>;
     
     #[pallet::storage]
